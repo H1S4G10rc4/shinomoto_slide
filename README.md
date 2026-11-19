@@ -2,7 +2,7 @@
 
 研究紹介や学会発表を章立てし、引用図・概念図・フローチャートを中心に説明するCodex向けスキルです。スライドの制作では全ページにスピーカーノートを付けます。Google Slidesへの実装手順も含みます。
 
-バージョン：1.1.1
+バージョン：1.2.0
 
 配布元：[H1S4G10rc4/shinomoto_slide](https://github.com/H1S4G10rc4/shinomoto_slide)
 
@@ -17,6 +17,8 @@
 - 見出しには原則として句読点を一切使わない
 - 全スライドに図の読み方とつなぎを含む発表原稿を付ける
 - 英語では用語と主張の強さを保ち 文法と数式記号も確認する
+- 概念図では実体と変換前後を見せ 比較と因果の矢印を区別する
+- 見出しと図ラベルの文字サイズを役割ごとに揃える
 
 章の順序や枚数は聴衆と持ち時間に合わせて調整します。表は数値や仕様の照合が目的のときに使い、説明の既定にはしません。図中の文言は英語、スライド本文と原稿は依頼の言語に合わせます。利用者が別の言語・デザイン・構成を指定した場合は、その指定を優先します。
 
@@ -107,6 +109,7 @@ Google Slidesでの制作には、Google Driveへの接続と、作成・編集�
 | [references/source-analysis.md](references/source-analysis.md) | 元動画の時刻と各技法の対応 |
 | [references/slide-design.md](references/slide-design.md) | レイアウトと配色の使い分け |
 | [references/design-system.json](references/design-system.json) | 座標と書式の初期値 |
+| [references/conceptual-diagrams.md](references/conceptual-diagrams.md) | 6報の論文図の読み解きと概念図の設計 |
 | [references/figure-workflow.md](references/figure-workflow.md) | 引用図の編集と新規作図の方針 |
 | [references/google-slides.md](references/google-slides.md) | Google Slidesへの実装とノートの確認 |
 | [LICENSE](LICENSE) | MITライセンス全文 |

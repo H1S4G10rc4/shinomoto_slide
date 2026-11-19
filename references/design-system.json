@@ -1,5 +1,5 @@
 {
-  "version": "1.1.1",
+  "version": "1.2.0",
   "unit": "pt",
   "page": {
     "width": 720,
@@ -24,7 +24,7 @@
       "y": 5,
       "width": 180,
       "height": 21,
-      "font_size": 14,
+      "font_size": 16,
       "bold": true,
       "alignment": "LEFT"
     },
@@ -33,7 +33,7 @@
       "y": 29,
       "width": 648,
       "height": 30,
-      "font_size": 20,
+      "font_size": 18,
       "bold": true,
       "alignment": "CENTER"
     },
@@ -72,11 +72,11 @@
   },
   "body_font_size_range": [
     16,
-    20
+    18
   ],
   "figure_label_font_size_range": [
-    18,
-    24
+    16,
+    18
   ],
   "title_punctuation": {
     "forbidden_characters": [
@@ -112,6 +112,17 @@
     "Preserve the aspect ratio and meaning of source figures",
     "Use editable shapes and text for original diagrams",
     "Do not recolor scientific data merely to fit the text palette",
-    "Review at the final display size"
-  ]
+    "Review at the final display size",
+    "Use one font size per semantic role across slides",
+    "Do not use a generation arrow to represent a comparison"
+  ],
+  "canvas_scaling": {
+    "rule": "Scale coordinates and font sizes by output width / 720; preserve 16:9 aspect ratio",
+    "example_1280x720": {
+      "title": 32,
+      "section": 28.44,
+      "figure_label": 28.44,
+      "citation": 16
+    }
+  }
 }
