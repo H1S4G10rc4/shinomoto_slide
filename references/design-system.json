@@ -1,0 +1,117 @@
+{
+  "version": "1.1.0",
+  "unit": "pt",
+  "page": {
+    "width": 720,
+    "height": 405,
+    "aspect_ratio": "16:9",
+    "background": "#FFFFFF"
+  },
+  "provenance": "Design observations from user-provided progress-report and journal-club PDFs; coordinates below are adapted working defaults, not exact measurements.",
+  "colors": {
+    "text": "#000000",
+    "emphasis": "#C00000",
+    "background": "#FFFFFF"
+  },
+  "fonts": {
+    "latin": "Arial",
+    "latin_fallback": "Helvetica",
+    "japanese": "Noto Sans JP"
+  },
+  "regions": {
+    "section": {
+      "x": 12,
+      "y": 5,
+      "width": 180,
+      "height": 21,
+      "font_size": 14,
+      "bold": true,
+      "alignment": "LEFT"
+    },
+    "title": {
+      "x": 36,
+      "y": 29,
+      "width": 648,
+      "height": 30,
+      "font_size": 20,
+      "bold": true,
+      "alignment": "CENTER"
+    },
+    "figure": {
+      "x": 24,
+      "y": 70,
+      "width": 672,
+      "height": 266
+    },
+    "takeaway": {
+      "x": 36,
+      "y": 345,
+      "width": 648,
+      "height": 27,
+      "font_size": 18,
+      "bold": true,
+      "alignment": "CENTER",
+      "optional": true
+    },
+    "citation": {
+      "x": 24,
+      "y": 379,
+      "width": 636,
+      "height": 16,
+      "font_size": 9,
+      "alignment": "LEFT"
+    },
+    "page_number": {
+      "x": 674,
+      "y": 379,
+      "width": 30,
+      "height": 16,
+      "font_size": 9,
+      "alignment": "RIGHT"
+    }
+  },
+  "body_font_size_range": [
+    16,
+    20
+  ],
+  "figure_label_font_size_range": [
+    18,
+    24
+  ],
+  "title_punctuation": {
+    "forbidden_characters": [
+      "、",
+      "。",
+      "，",
+      "．",
+      ",",
+      "."
+    ],
+    "avoid_decorative_separators": [
+      "：",
+      ":",
+      "？",
+      "?",
+      "！",
+      "!"
+    ]
+  },
+  "notes": {
+    "required_for_all_slides": true,
+    "language": "presentation_language",
+    "include": [
+      "spoken_script",
+      "figure_reading_order",
+      "transition",
+      "estimated_seconds",
+      "sources_and_modifications"
+    ]
+  },
+  "constraints": [
+    "Keep titles centered on the full page",
+    "Preserve the aspect ratio and meaning of source figures",
+    "Use editable shapes and text for original diagrams",
+    "Do not recolor scientific data merely to fit the text palette",
+    "Review at the final display size"
+  ]
+}

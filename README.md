@@ -1,10 +1,27 @@
-# 科学プレゼンの構成と推敲
+# 科学プレゼンの構成と図解
 
-研究紹介や学会発表の構成、図の見せ方、用語、発表原稿と時間配分を設計するCodex向けスキルです。篠本滋氏の講義「プレゼンテーションの技法」を画面と字幕から分析し、再利用できる判断基準に整理しました。
+研究紹介や学会発表を章立てし、引用図・概念図・フローチャートを中心に説明するCodex向けスキルです。スライドの制作では全ページにスピーカーノートを付けます。Google Slidesへの実装手順も含みます。
 
-バージョン：1.0.0
+バージョン：1.1.0
 
 配布元：[H1S4G10rc4/shinomoto_slide](https://github.com/H1S4G10rc4/shinomoto_slide)
+
+篠本滋氏の講義から抽出した構成と推敲の技法に、依頼者の指定した章立て、参考PDFのレイアウト、`scientific-figure-design` の作図方針を組み合わせています。
+
+## 作成するスライド
+
+- Contentsで構成を示し BackgroundとIntroductionで前提と問いを分ける
+- Methodsは処理図や概念図 Resultsは引用図やデータに基づくグラフを中心にする
+- 左上にセクション名を置き 見出しは中央に揃える
+- 白背景に黒い文字を置き 強調には赤を使う
+- 見出しには原則として句読点を一切使わない
+- 全スライドに図の読み方とつなぎを含む発表原稿を付ける
+
+章の順序や枚数は聴衆と持ち時間に合わせて調整します。表は数値や仕様の照合が目的のときに使い、説明の既定にはしません。図中の文言は英語、スライド本文と原稿は依頼の言語に合わせます。利用者が別の言語・デザイン・構成を指定した場合は、その指定を優先します。
+
+![中央見出しと左上の章名を使ったレイアウト作例](assets/layout-example.svg)
+
+この作例は配置を示すために作成した模式図です。実際の発表では、入力名、処理名、評価量を資料に即して具体化します。
 
 ## 導入
 
@@ -45,7 +62,9 @@ fi
 ```text
 $scientific-presentation-techniques を使って
 この論文を研究室の学生向けに15分で紹介するスライドを作って
-主要な図を使い 各図の読み方と発表者ノートも付けて
+Contents Background Introductionなどの章立てを設け
+引用図の編集と概念図を中心に説明して
+全スライドにスピーカーノートを付けて Google Slidesで作って
 ```
 
 既存スライドのレビューにも使えます。
@@ -56,7 +75,9 @@ $scientific-presentation-techniques でこの発表をレビューして
 問題がある箇所に具体的な修正案を示して
 ```
 
-スキル自体は文章による指示と参考資料で構成され、追加の実行ライブラリや元動画のダウンロードを必要としません。PDFの読取りやスライドファイルの生成には、利用環境側の対応ツールが必要です。
+スキル自体は指示と参考資料で構成され、追加の実行ライブラリや元動画のダウンロードを必要としません。PDFの読取りやスライド制作には利用環境側の対応ツールが必要です。`scientific-figure-design` がある場合は併用し、ない場合も同梱の作図方針で進められます。
+
+Google Slidesでの制作には、Google Driveへの接続と、作成・編集・ノート読取りに対応するツールが必要です。新規制作と既存資料の編集を分け、変換後の図やノートを読み戻して確認する手順を定めています。このスキルに認証情報やGoogleとの接続機能そのものは含まれません。
 
 ## 適用する判断基準
 
@@ -67,7 +88,7 @@ $scientific-presentation-techniques でこの発表をレビューして
 - 観測結果と解釈と限界を区別する
 - スライドの文章と口頭説明を分ける
 
-構成案では、各スライドの役割、主張、図、口頭説明、目安時間を示します。論文にない結果を補ったり、固定の枚数や四部構成に当てはめたりしない設計です。
+構成案では章ごとにスライドを並べ、各ページの役割、主張、図の出典と編集、原稿、目安時間を示します。論文にない結果を補ったり、固定の枚数や四部構成に当てはめたりしない設計です。
 
 ## 見出しの表記
 
@@ -85,10 +106,17 @@ $scientific-presentation-techniques でこの発表をレビューして
 | [agents/openai.yaml](agents/openai.yaml) | Codex向けの表示名と呼び出し例 |
 | [references/application-patterns.md](references/application-patterns.md) | 構成案とレビューの具体例 |
 | [references/source-analysis.md](references/source-analysis.md) | 元動画の時刻と各技法の対応 |
+| [references/slide-design.md](references/slide-design.md) | レイアウトと配色の使い分け |
+| [references/design-system.json](references/design-system.json) | 座標と書式の初期値 |
+| [references/figure-workflow.md](references/figure-workflow.md) | 引用図の編集と新規作図の方針 |
+| [references/google-slides.md](references/google-slides.md) | Google Slidesへの実装とノートの確認 |
+| [assets/layout-example.svg](assets/layout-example.svg) | 独自に作成したレイアウト作例 |
 | [LICENSE](LICENSE) | MITライセンス全文 |
 
 ## 出典とライセンス
 
 参照した講義は、篠本滋氏の[「プレゼンテーションの技法」](https://www.youtube.com/watch?v=Dw4khOfDGHk)です。チャンネルはShinomoto-san、公開日は2022年4月7日です。講師の説明と本スキルへの応用上の解釈は、[分析記録](references/source-analysis.md)で区別しています。本スキルは講師やチャンネルの公式配布物ではありません。
 
-スキル本文と付属文書は[MITライセンス](LICENSE)で配布します。[ライセンス原文](https://opensource.org/license/mit)を採用しています。元動画、字幕、画面画像、論文などの第三者コンテンツは同梱せず、このMITライセンスの対象にも含めません。
+章立てとデザインには依頼者から提供された進捗報告とJournal ClubのPDFを参考にしています。内容の正しさや発表技法の模範として扱うものではありません。作図の判断基準には、依頼者が指定した `scientific-figure-design` の知見を取り入れています。
+
+スキル本文と付属文書、独自のレイアウト作例は[MITライセンス](LICENSE)で配布します。[ライセンス原文](https://opensource.org/license/mit)を採用しています。元動画、字幕、画面画像、参考PDF、論文、別スキルのファイルそのものは同梱せず、このMITライセンスの対象にも含めません。
