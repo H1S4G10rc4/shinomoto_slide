@@ -1,0 +1,4 @@
+interface:
+  display_name: "科学プレゼンの構成・推敲"
+  short_description: "動画の技法に基づき、研究発表の論点・図解・用語・時間配分を改善する"
+  default_prompt: "$scientific-presentation-techniques を使い、この発表を聴衆と持ち時間に合わせて構成し、各スライドの主張・図・話す内容を提案してください。"
