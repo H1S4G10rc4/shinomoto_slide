@@ -2,7 +2,7 @@
 
 研究紹介や学会発表を章立てし、引用図・概念図・フローチャートを中心に説明するCodex向けスキルです。スライドの制作では全ページにスピーカーノートを付けます。Google Slidesへの実装手順も含みます。
 
-バージョン：1.1.0
+バージョン：1.1.1
 
 配布元：[H1S4G10rc4/shinomoto_slide](https://github.com/H1S4G10rc4/shinomoto_slide)
 
@@ -16,12 +16,11 @@
 - 白背景に黒い文字を置き 強調には赤を使う
 - 見出しには原則として句読点を一切使わない
 - 全スライドに図の読み方とつなぎを含む発表原稿を付ける
+- 英語では用語と主張の強さを保ち 文法と数式記号も確認する
 
 章の順序や枚数は聴衆と持ち時間に合わせて調整します。表は数値や仕様の照合が目的のときに使い、説明の既定にはしません。図中の文言は英語、スライド本文と原稿は依頼の言語に合わせます。利用者が別の言語・デザイン・構成を指定した場合は、その指定を優先します。
 
-![中央見出しと左上の章名を使ったレイアウト作例](assets/layout-example.svg)
-
-この作例は配置を示すために作成した模式図です。実際の発表では、入力名、処理名、評価量を資料に即して具体化します。
+このリポジトリの配布対象はスキルの指示と設計情報です。生成したスライドや作例は含めません。
 
 ## 導入
 
@@ -110,7 +109,6 @@ Google Slidesでの制作には、Google Driveへの接続と、作成・編集�
 | [references/design-system.json](references/design-system.json) | 座標と書式の初期値 |
 | [references/figure-workflow.md](references/figure-workflow.md) | 引用図の編集と新規作図の方針 |
 | [references/google-slides.md](references/google-slides.md) | Google Slidesへの実装とノートの確認 |
-| [assets/layout-example.svg](assets/layout-example.svg) | 独自に作成したレイアウト作例 |
 | [LICENSE](LICENSE) | MITライセンス全文 |
 
 ## 出典とライセンス
@@ -119,4 +117,4 @@ Google Slidesでの制作には、Google Driveへの接続と、作成・編集�
 
 章立てとデザインには依頼者から提供された進捗報告とJournal ClubのPDFを参考にしています。内容の正しさや発表技法の模範として扱うものではありません。作図の判断基準には、依頼者が指定した `scientific-figure-design` の知見を取り入れています。
 
-スキル本文と付属文書、独自のレイアウト作例は[MITライセンス](LICENSE)で配布します。[ライセンス原文](https://opensource.org/license/mit)を採用しています。元動画、字幕、画面画像、参考PDF、論文、別スキルのファイルそのものは同梱せず、このMITライセンスの対象にも含めません。
+スキル本文と付属文書は[MITライセンス](LICENSE)で配布します。[ライセンス原文](https://opensource.org/license/mit)を採用しています。元動画、字幕、画面画像、参考PDF、論文、別スキルのファイルそのものは同梱せず、このMITライセンスの対象にも含めません。

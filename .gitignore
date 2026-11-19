@@ -3,3 +3,8 @@ __MACOSX/
 __pycache__/
 .venv/
 *.zip
+
+# Generated examples stay outside the public distribution
+/examples/
+/previews/
+/assets/layout-example.*
