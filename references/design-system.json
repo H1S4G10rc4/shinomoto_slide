@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.0",
   "unit": "pt",
   "page": {
     "width": 720,
@@ -7,66 +7,69 @@
     "aspect_ratio": "16:9",
     "background": "#FFFFFF"
   },
-  "provenance": "Design observations from user-provided progress-report and journal-club PDFs; coordinates below are adapted working defaults, not exact measurements.",
+  "provenance": "Design observations from user-provided 720 x 405 pt progress-report and journal-club PDFs; compact shared header band and layout archetypes, with optical placement checked in the final renderer. Text-box bounds are working defaults, not glyph bounds.",
   "colors": {
     "text": "#000000",
     "emphasis": "#C00000",
     "background": "#FFFFFF"
   },
   "fonts": {
-    "latin": "Arial",
-    "latin_fallback": "Helvetica",
-    "japanese": "Noto Sans JP"
+    "slide": "Noto Sans JP",
+    "latin": "Noto Sans JP",
+    "latin_fallback": "Arial",
+    "japanese": "Noto Sans JP",
+    "standalone_figure": "Arial",
+    "standalone_figure_fallback": "Helvetica"
   },
   "regions": {
     "section": {
-      "x": 12,
-      "y": 5,
-      "width": 180,
-      "height": 21,
+      "x": 6.75,
+      "y": 4.125,
+      "width": 135.75,
+      "height": 21.75,
       "font_size": 16,
       "bold": true,
       "alignment": "LEFT"
     },
     "title": {
-      "x": 36,
-      "y": 29,
-      "width": 648,
-      "height": 30,
+      "x": 142.5,
+      "y": 11.25,
+      "width": 435,
+      "height": 24.75,
       "font_size": 18,
       "bold": true,
       "alignment": "CENTER"
     },
     "figure": {
-      "x": 24,
-      "y": 70,
-      "width": 672,
-      "height": 266
+      "x": 21,
+      "y": 50,
+      "width": 678,
+      "height": 275
     },
     "takeaway": {
-      "x": 36,
-      "y": 345,
-      "width": 648,
-      "height": 27,
-      "font_size": 18,
+      "x": 21,
+      "y": 345.75,
+      "width": 678,
+      "height": 24.75,
+      "font_size": 16,
       "bold": true,
       "alignment": "CENTER",
       "optional": true
     },
     "citation": {
-      "x": 24,
-      "y": 379,
-      "width": 636,
-      "height": 16,
-      "font_size": 9,
-      "alignment": "LEFT"
+      "x": 21,
+      "y": 378.75,
+      "width": 639,
+      "height": 15.75,
+      "font_size": 10,
+      "alignment": "RIGHT"
     },
     "page_number": {
-      "x": 674,
-      "y": 379,
-      "width": 30,
-      "height": 16,
-      "font_size": 9,
+      "x": 693.75,
+      "y": 379.5,
+      "width": 16.5,
+      "height": 16.5,
+      "font_size": 10,
       "alignment": "RIGHT"
     }
   },
@@ -105,7 +108,8 @@
       "transition",
       "estimated_seconds",
       "sources_and_modifications"
-    ]
+    ],
+    "main_talk_and_appendix_time_separate": true
   },
   "constraints": [
     "Keep titles centered on the full page",
@@ -114,15 +118,42 @@
     "Do not recolor scientific data merely to fit the text palette",
     "Review at the final display size",
     "Use one font size per semantic role across slides",
-    "Do not use a generation arrow to represent a comparison"
+    "Do not use a generation arrow to represent a comparison",
+    "Match layout and whitespace as well as type size",
+    "Keep section and title in a compact shared top band",
+    "Keep appendix figures readable and provide notes for every appendix slide",
+    "Reconcile figure coverage against actual final slide IDs or page numbers"
   ],
   "canvas_scaling": {
-    "rule": "Scale coordinates and font sizes by output width / 720; preserve 16:9 aspect ratio",
-    "example_1280x720": {
-      "title": 32,
-      "section": 28.44,
-      "figure_label": 28.44,
-      "citation": 16
-    }
+    "point_units": "Use 720 x 405 pt with 18 pt titles and 16 pt section/body text",
+    "css_96dpi_units": "Multiply point coordinates and font sizes by 4/3",
+    "css_96dpi_example": {
+      "page_width": 960,
+      "page_height": 540,
+      "title": 24,
+      "section": 21.333333,
+      "figure_label": 21.333333,
+      "citation": 13.333333
+    },
+    "render_scale": "Image rasterization scale changes preview pixels, not the authored point sizes",
+    "verification": "Read page dimensions and text sizes from the delivered format; matching proportions on a 1280 x 720 preview does not prove 18 pt typography"
+  },
+  "layout_archetypes": {
+    "cover": "Centered presentation type above the paper title; bibliographic text below toward the right",
+    "contents": "Centered Contents title without a duplicate section label; left-aligned numbered sections with an indented explanation below each",
+    "comparison": "Aligned subheadings and panels with matched top and bottom edges; optional thin vertical divider; short takeaway below",
+    "wide_figure": "Large wide panel close below the header; nearby reading guide and compact bottom takeaway",
+    "appendix_divider": "Centered Appendix title on white; page number bottom right",
+    "appendix_content": "Same type scale and figure-first layout as the main talk; section Appendix; source figure and panel IDs near the figure; reference to the related main slide"
+  },
+  "paper_review": {
+    "all_main_text_figures_by_default": true,
+    "map_every_panel_to_main_or_appendix": true,
+    "supporting_information_not_fitted_in_main": "appendix_slides",
+    "notes_alone_count_as_figure_inclusion": false,
+    "main_figures_in_main_talk_by_default": true,
+    "whole_figure_moved_to_appendix": "Point to its appendix location from the related main slide and record the placement",
+    "supplementary_figure_scope": "Select according to relevance to the main argument and discussion",
+    "omissions": "Respect explicit user scope; identify unavailable or excluded material and the reason"
   }
 }

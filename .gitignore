@@ -8,3 +8,6 @@ __pycache__/
 /examples/
 /previews/
 /assets/layout-example.*
+/outputs/
+/private-examples/
+/research/
