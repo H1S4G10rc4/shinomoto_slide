@@ -1,4 +1,4 @@
 interface:
   display_name: "科学プレゼンの構成と図解"
   short_description: "章立てと引用図を中心に、研究発表のスライドとスピーカーノートを作成する"
-  default_prompt: "$scientific-presentation-techniques を使い、参考の文字サイズと配置に合わせて章立てと図を中心にした発表を作り、論文紹介では本文のFigを原則すべて扱って補助情報をAppendixに載せ、全スライドにスピーカーノートを付けてください。"
+  default_prompt: "$scientific-presentation-techniques を使い、参考の文字サイズと配置に合わせて章立てと図を中心にした発表を作り、論文紹介では本文の全Figと各パネルを原著の順に説明し、Summaryは文章の箇条書きにしてください。必要な枚数と行数を確保して各図の説明を省略しないノートを付け、補助情報はAppendixに載せてください。"
