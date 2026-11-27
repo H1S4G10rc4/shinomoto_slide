@@ -2,7 +2,7 @@
 
 研究紹介や学会発表を章立てし、引用図・概念図・フローチャートを中心に説明するCodex向けスキルです。スライドの制作では全ページにスピーカーノートを付けます。Google Slidesへの実装手順も含みます。
 
-バージョン：1.4.0
+バージョン：1.5.0
 
 配布元：[H1S4G10rc4/shinomoto_slide](https://github.com/H1S4G10rc4/shinomoto_slide)
 
@@ -10,15 +10,19 @@
 
 ## 作成するスライド
 
-- Contentsで構成を示し BackgroundとIntroductionで前提と問いを分ける
+- BackgroundとIntroductionで前提と問いを分け Contentsは必要な場合に加える
 - Methodsは処理図や概念図 Resultsは引用図やデータに基づくグラフを中心にする
 - BackgroundとIntroductionを整えてから 本文のFigと各パネルを原著の順に本編で説明する
 - Summaryは必ず文章の箇条書きにし 限界や解釈も必要に応じて文章で説明する
 - 本編に収まらない補助情報はSummaryの後のAppendixに載せ 本編から案内する
-- 左上にセクション名を置き 見出しは中央に揃える
+- 左上には通常はセクション名を置き 論文図のページではFig.1-aなどの図識別子に置き換える
+- 見出しは中央に揃え 重複する凡例説明を削り 必要な補助注記は図の近くへ小さく置く
 - 白背景に黒い文字を置き 強調には赤を使う
 - 見出しには原則として句読点を一切使わない
 - 全スライドに各パネルの条件 軸 観察 解釈 留保を省略しない発表原稿を付ける
+- 結果の直前に必要な手法と数理を説明し 代表的方法との違いを推定対象と仮定から示す
+- 数式はTeXで組版し 原式 記号 画像の可読性を確認する
+- ノートは発表全体の問いと結果をつなぐ話し言葉だけにし 英語発表では英語原稿の後に対応する日本語原稿を置く
 - 一枚のメッセージを絞るために スライド枚数 行数 ノートの分量が増えることを厭わない
 - 英語では用語と主張の強さを保ち 文法と数式記号も確認する
 - 概念図では実体と変換前後を見せ 比較と因果の矢印を区別する
@@ -106,7 +110,7 @@ Google Slidesでの制作には、作成・編集・ノート読取りに対応�
 
 スライドのタイトル、副題、セクション見出しでは、原則として句読点を一切使いません。和文と英文のコンマ・ピリオドを含め、途中にも末尾にも付けません。長い見出しは言い換えや改行で整理します。
 
-小数点や略語の表記を保持する必要がある情報は本文、出典、ノートへ移します。本文や図中ラベルの句読点は使用できます。利用者が個別に別の表記を指定した場合は、その指定に従います。
+小数点や略語の表記を保持する必要がある情報は本文、出典、ノートへ移します。ただし左上の `Fig.1-a` などの図識別子は参照記号としてそのまま使います。本文や図中ラベルの句読点は使用できます。利用者が個別に別の表記を指定した場合は、その指定に従います。
 
 この表記方針は作成依頼者の希望で追加したものです。元動画の教えとして扱いません。
 
@@ -118,6 +122,7 @@ Google Slidesでの制作には、作成・編集・ノート読取りに対応�
 | [agents/openai.yaml](agents/openai.yaml) | Codex向けの表示名と呼び出し例 |
 | [references/application-patterns.md](references/application-patterns.md) | 構成案とレビューの具体例 |
 | [references/figure-walkthrough.md](references/figure-walkthrough.md) | 原著の図順と文章の箇条書きと省略しないノート |
+| [references/methods-and-story.md](references/methods-and-story.md) | 核心の数理と代表的方法の比較と発表全体の接続 |
 | [references/paper-coverage.md](references/paper-coverage.md) | 本文Figとパネルの掲載範囲とAppendixの構成 |
 | [references/source-analysis.md](references/source-analysis.md) | 元動画の時刻と各技法の対応 |
 | [references/slide-design.md](references/slide-design.md) | レイアウトと配色の使い分け |

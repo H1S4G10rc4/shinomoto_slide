@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0",
+  "version": "1.5.0",
   "unit": "pt",
   "page": {
     "width": 720,
@@ -11,7 +11,8 @@
   "colors": {
     "text": "#000000",
     "emphasis": "#C00000",
-    "background": "#FFFFFF"
+    "background": "#FFFFFF",
+    "figure_identifier": "#595959"
   },
   "fonts": {
     "slide": "Noto Sans JP",
@@ -97,23 +98,26 @@
       "?",
       "！",
       "!"
-    ]
+    ],
+    "reference_identifier_exception": "Keep the exact figure and panel notation such as Fig.1-a in the upper-left slot"
   },
   "notes": {
     "required_for_all_slides": true,
-    "language": "presentation_language",
+    "language": "Complete English then corresponding complete Japanese for an English talk unless otherwise requested",
     "include": [
       "spoken_script",
       "figure_reading_order",
       "transition",
-      "estimated_seconds",
-      "sources_and_modifications",
       "axes_units_and_symbols",
-      "conditions_observations_interpretation_and_limits"
+      "conditions_observations_interpretation_and_limits",
+      "why_this_analysis_is_needed",
+      "what_is_established_and_what_remains"
     ],
     "main_talk_and_appendix_time_separate": true,
     "cover_every_displayed_panel": true,
-    "arbitrary_word_limit": false
+    "arbitrary_word_limit": false,
+    "spoken_only": true,
+    "metadata_destination": "Separate authoring record for sources, modifications, stage cues, timing estimates and checks"
   },
   "constraints": [
     "Keep titles centered on the full page",
@@ -148,7 +152,7 @@
     "comparison": "Aligned subheadings and panels with matched top and bottom edges; optional thin vertical divider; short takeaway below",
     "wide_figure": "Large wide panel close below the header; nearby reading guide and compact bottom takeaway",
     "appendix_divider": "Centered Appendix title on white; page number bottom right",
-    "appendix_content": "Same type scale and figure-first layout as the main talk; section Appendix; source figure and panel IDs near the figure; reference to the related main slide",
+    "appendix_content": "Same type scale as the main talk; upper-left Appendix for explanations or figure/panel identifier for reproduced evidence; link to related main slide",
     "summary": "Mandatory full-sentence bullets with subject, predicate and necessary qualifications; 16 pt body text; allow multiline items or additional slides",
     "sentence_bullets": "Use native editable bullets for scope, limitations and interpretations when an image adds no understanding; align wrapped lines and preserve spacing"
   },
@@ -163,6 +167,14 @@
     "omissions": "Respect explicit user scope; identify unavailable or excluded material and the reason",
     "default_order": "After sufficient Background and Introduction, walk through main-text figures and panels in original order",
     "all_main_text_panels_in_main_by_default": true,
-    "arbitrary_slide_or_line_limit": false
-  }
+    "arbitrary_slide_or_line_limit": false,
+    "core_methods_and_mathematics": "Explain inputs, estimands, assumptions, core equations, tests, thresholds and metrics before the first dependent result",
+    "representative_alternatives": "Explain their target and assumptions briefly, without inventing a universal performance ranking",
+    "contents_optional": true,
+    "restore_user_deleted_contents": false
+  },
+  "auxiliary_annotation_font_size_range": [
+    11,
+    12
+  ]
 }
