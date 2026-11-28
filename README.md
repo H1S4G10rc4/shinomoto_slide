@@ -2,11 +2,13 @@
 
 研究紹介や学会発表を章立てし、引用図・概念図・フローチャートを中心に説明するCodex向けスキルです。スライドの制作では全ページにスピーカーノートを付けます。Google Slidesへの実装手順も含みます。
 
-バージョン：1.5.0
+バージョン：1.6.0
 
 配布元：[H1S4G10rc4/shinomoto_slide](https://github.com/H1S4G10rc4/shinomoto_slide)
 
 篠本滋氏の講義から抽出した構成と推敲の技法に、依頼者の指定した章立て、参考PDFのレイアウト、`scientific-figure-design` の作図方針を組み合わせています。
+
+参考発表を使う際は、画面だけでなくスピーカーノートと説明の順序も確認します。1.6.0では、具体的な問題を手法へつなぐ構成、同じ全体図への復帰、同じ例を式と結果まで追う説明、画面と原稿の通し確認を明文化しました。非公開の参考資料や作例は配布に含めません。
 
 ## 作成するスライド
 
@@ -118,6 +120,7 @@ Google Slidesでの制作には、作成・編集・ノート読取りに対応�
 
 | ファイル | 内容 |
 |---|---|
+| [references/reference-led-narrative.md](references/reference-led-narrative.md) | 参考発表の全体構成と原稿から学ぶ手順 具体例の継続 全体図への復帰 通し確認 |
 | [SKILL.md](SKILL.md) | 適用範囲と判断基準 |
 | [agents/openai.yaml](agents/openai.yaml) | Codex向けの表示名と呼び出し例 |
 | [references/application-patterns.md](references/application-patterns.md) | 構成案とレビューの具体例 |
